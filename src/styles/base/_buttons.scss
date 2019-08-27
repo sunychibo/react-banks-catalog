@@ -4,6 +4,8 @@
 }
 
 .bank-catalog__button {
+  height: fit-content;
+  align-self: flex-end;
   font-family: inherit;
   display: inline-block;
   position: relative;

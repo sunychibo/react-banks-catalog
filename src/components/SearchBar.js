@@ -18,6 +18,7 @@ class SearchBar extends React.Component {
         onSubmit={(event) => { event.preventDefault() }}
         noValidate>
         <p className="bank-catalog__input-group search-bar__input-group">
+          <label className="bank-catalog__label search-bar__label" htmlFor="email">Поиск по справочнику</label>
           <input
             className="bank-catalog__input search-bar__input"
             id="email"
@@ -27,7 +28,6 @@ class SearchBar extends React.Component {
             onChange={this.onInputTyping}
             placeholder="Сбербанк"
             noValidate />
-          <label className="bank-catalog__label search-bar__label" htmlFor="email">Поиск по справочнику</label>
         </p>
         <Modal
           modalType="Create"

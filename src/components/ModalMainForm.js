@@ -161,6 +161,11 @@ class ModalMainForm extends React.Component {
           onSubmit={this.handleSubmit}
           noValidate>
           <p className="bank-catalog__input-group main-form__input-group">
+            <label
+              className="bank-catalog__label main-form__label"
+              htmlFor="name">Название</label>
+            {!!formErrors.name.length &&
+              (<span className="main-form__input-error-message">{formErrors.name}</span>)}
             <input
               className="bank-catalog__input main-form__input"
               id="name"
@@ -170,13 +175,13 @@ class ModalMainForm extends React.Component {
               onChange={this.handleInputChange}
               placeholder="Сбербанк России"
               noValidate />
-            <label
-              className="bank-catalog__label main-form__label"
-              htmlFor="name">Название</label>
-            {!!formErrors.name.length &&
-              (<span className="main-form__input-error-message">{formErrors.name}</span>)}
           </p>
           <p className="bank-catalog__input-group main-form__input-group">
+            <label
+              className="bank-catalog__label main-form__label"
+              htmlFor="address">Адрес</label>
+            {!!formErrors.address.length &&
+              (<span className="main-form__input-error-message">{formErrors.address}</span>)}
             <input
               className="bank-catalog__input main-form__input"
               id="address"
@@ -186,13 +191,14 @@ class ModalMainForm extends React.Component {
               onChange={this.handleInputChange}
               placeholder="Москва, 117997, ул. Вавилова, д. 19"
               noValidate />
-            <label
-              className="bank-catalog__label main-form__label"
-              htmlFor="address">Адрес</label>
-            {!!formErrors.address.length &&
-              (<span className="main-form__input-error-message">{formErrors.address}</span>)}
+            
           </p>
           <p className="bank-catalog__input-group main-form__input-group">
+            <label
+              className="bank-catalog__label main-form__label"
+              htmlFor="bik">БИК</label>
+            {!!formErrors.bik.length &&
+              (<span className="main-form__input-error-message">{formErrors.bik}</span>)}
             <input
               className="bank-catalog__input main-form__input"
               id="bik"
@@ -202,13 +208,13 @@ class ModalMainForm extends React.Component {
               onChange={this.handleInputChange}
               placeholder="044525225"
               noValidate />
-            <label
-              className="bank-catalog__label main-form__label"
-              htmlFor="bik">БИК</label>
-            {!!formErrors.bik.length &&
-              (<span className="main-form__input-error-message">{formErrors.bik}</span>)}
           </p>
           <p className="bank-catalog__input-group main-form__input-group">
+            <label
+              className="bank-catalog__label main-form__label"
+              htmlFor="corcount">Корсчёт</label>
+            {!!formErrors.corcount.length &&
+              (<span className="main-form__input-error-message">{formErrors.corcount}</span>)}
             <input
               className="bank-catalog__input main-form__input"
               id="corcount"
@@ -218,11 +224,6 @@ class ModalMainForm extends React.Component {
               onChange={this.handleInputChange}
               placeholder="30101810400000000225"
               noValidate />
-            <label
-              className="bank-catalog__label main-form__label"
-              htmlFor="corcount">Корсчёт</label>
-            {!!formErrors.corcount.length &&
-              (<span className="main-form__input-error-message">{formErrors.corcount}</span>)}
           </p>
           <div className="modal__buttons main-form__buttons">
             <AppButton

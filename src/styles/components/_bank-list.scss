@@ -55,7 +55,8 @@
     border: transparent;
   }
 
-  .bank-list__data-row+.bank-list__data-row {
+  .bank-list__data-row +
+  .bank-list__data-row {
     border-top: 1px solid $darkgrey;
   }
 
@@ -65,7 +66,8 @@
     font-size: 13px;
   }
 
-  .bank-list__data-cell+.bank-list__data-cell {
+  .bank-list__data-cell +
+  .bank-list__data-cell {
     border-top: 1px dotted $mediumgrey;
   }
 
@@ -74,7 +76,8 @@
     padding-right: 5px;
   }
 
-  .button-mutate--inverse+.button-mutate--inverse {
+  .button-mutate--inverse +
+  .button-mutate--inverse {
     margin-left: 5px;
   }
 }
