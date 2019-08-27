@@ -1,0 +1,80 @@
+.bank-catalog__bank-list {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+}
+
+.bank-list__header-cell,
+.bank-list__data-cell {
+  padding: 12px 5px;
+}
+
+.bank-list__header-cell {
+  text-align: left;
+  background-color: $dark;
+  color: $white;
+  font-weight: 300;
+}
+
+.bank-list__data-cell:first-child {
+  font-weight: 500;
+}
+
+.bank-list__data-cell:last-child {
+  width: 88px;
+  padding-right: 0px;
+}
+
+.button-mutate--inverse:last-child {
+  float: right;
+}
+
+.bank-list__data-row {
+  transition: all 0.1s ease-in-out;
+  border-bottom: 1px solid $darkgrey;
+}
+
+.bank-list__data-row:hover {
+  background-color: $lightgrey;
+}
+
+@media screen and (max-width: 760px) {
+  .bank-list__header {
+    display: none;
+  }
+
+  .bank-list__data-cell:before {
+    content: attr(data-label);
+    float: left;
+    font-weight: 600;
+    padding-right: 10px;
+  }
+
+  .bank-list__data-row {
+    display: block;
+    border: transparent;
+  }
+
+  .bank-list__data-row+.bank-list__data-row {
+    border-top: 1px solid $darkgrey;
+  }
+
+  .bank-list__data-cell {
+    display: block;
+    text-align: right;
+    font-size: 13px;
+  }
+
+  .bank-list__data-cell+.bank-list__data-cell {
+    border-top: 1px dotted $mediumgrey;
+  }
+
+  .bank-list__data-cell:last-child {
+    width: auto;
+    padding-right: 5px;
+  }
+
+  .button-mutate--inverse+.button-mutate--inverse {
+    margin-left: 5px;
+  }
+}

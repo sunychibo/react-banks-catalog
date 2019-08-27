@@ -1,12 +1,15 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was created with React, SCSS and Webpack.
 
-## Install
+At first in the project directory, you should run:
+### `yarn install`
 
-In the project directory, you will need to run:
-### `npm install`
-### `npm start`
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Available Scripts
+### `yarn run dev-server` 
 
-The page will reload if you make edits.<br>
+Runs the app in the development mode with webpack-dev-server.<br>
+The app automatically opens [http://localhost:8080](http://localhost:8080) to view it in the browser.
+
+The page will hot reload if you make edits.<br>
 You will also see any lint errors in the console.
+
+

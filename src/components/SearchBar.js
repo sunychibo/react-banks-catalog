@@ -1,39 +1,44 @@
 import React from 'react';
-import './SearchBar.css';
-import CreateUpdateForm from './CreateUpdateForm';
+import Modal from './Modal';
+import AppIcons from '../icons';
 
 class SearchBar extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {term: ''}
-    }
-    onInputTyping = (event) => {
-        this.setState({term: event.target.value});
-        this.props.onTyping(event.target.value);
-    }
-    render() {
-        return (
-            <div className="ui segment">
-                <form
-                    className="ui form form--search"
-                    onSubmit={(event) => {event.preventDefault()}}>
-                    <div className="ui transparent left icon input input-search_container">
-                        <input
-                            placeholder="Введите название или БИК"
-                            type="text"
-                            value={this.state.term}
-                            onChange={this.onInputTyping}/>
-                        <i className="search icon"></i>
-                    </div>
-                    <CreateUpdateForm
-                        method="add"
-                        headingMessage="Добавить новую запись"
-                        headingIcon="plus"
-                        refreshCallback={this.props.refreshCallback}/>
-                </form>
-            </div>
-        );
-    }
+  constructor(props) {
+    super(props);
+    this.state = { term: '' }
+  }
+  onInputTyping = (event) => {
+    this.setState({ term: event.target.value });
+    this.props.onTyping(event.target.value);
+  }
+  render() {
+    return (
+      <form
+        className="bank-catalog__search-bar"
+        onSubmit={(event) => { event.preventDefault() }}
+        noValidate>
+        <p className="bank-catalog__input-group search-bar__input-group">
+          <input
+            className="bank-catalog__input search-bar__input"
+            id="email"
+            type="text"
+            name="search"
+            value={this.state.term}
+            onChange={this.onInputTyping}
+            placeholder="Сбербанк"
+            noValidate />
+          <label className="bank-catalog__label search-bar__label" htmlFor="email">Поиск по справочнику</label>
+        </p>
+        <Modal
+          modalType="Create"
+          modalHeading="Создание записи"
+          buttonCssModifierClass="bank-catalog__button--primary button-mutate--forward"
+          buttonIcon={AppIcons.plus}
+          buttonText="Добавить запись"
+          refreshCallback={this.props.refreshCallback} />
+      </form>
+    );
+  }
 }
 
 export default SearchBar;

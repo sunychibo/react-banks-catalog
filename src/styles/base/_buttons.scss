@@ -1,0 +1,100 @@
+@mixin without-text--size {
+  width: 36px;
+  height: 36px;
+}
+
+.bank-catalog__button {
+  font-family: inherit;
+  display: inline-block;
+  position: relative;
+  background: $dark;
+  color: $white;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  font-size: 13px;
+
+  &--primary {
+    padding: 12px 20px;
+  }
+
+  &--secondary {
+    padding: 0;
+  }
+
+  @media screen and (max-width: 760px) {
+    font-size: 10px;
+  }
+}
+
+.button-mutate__icon {
+  width: 24px;
+  height: 24px;
+  @include absolute-alignment;
+}
+
+.button-mutate--forward {
+  .button-mutate__text {
+    display: block;
+
+    @media screen and (max-width: 450px) {
+      display: none;
+    }
+  }
+
+  .button-mutate__icon {
+    display: none;
+
+    @media screen and (max-width: 450px) {
+      display: block;
+    }
+  }
+
+  @media screen and (max-width: 450px) {
+    @include without-text--size;
+  }
+}
+
+.button-mutate--inverse {
+  @include without-text--size;
+
+  .button-mutate__icon {
+    @media screen and (max-width: 760px) {
+      left: 5px;
+      transform: translate(0, -55%);
+    }
+  }
+
+  .button-mutate__text {
+    display: none;
+
+    @media screen and (max-width: 760px) {
+      display: block;
+      padding: 12px;
+      padding-left: 36px;
+    }
+  }
+
+  @media screen and (max-width: 760px) {
+    width: auto;
+    height: auto;
+  }
+}
+
+.bank-catalog__button:focus {
+  outline: transparent;
+}
+
+.bank-catalog__button:hover,
+.bank-catalog__button:active {
+  outline: transparent;
+  background-color: $darkgrey;
+}
+
+.bank-catalog__button.disabled,
+.bank-catalog__button:disabled {
+  cursor: default;
+  opacity: 0.5;
+  background-color: $dark;
+}

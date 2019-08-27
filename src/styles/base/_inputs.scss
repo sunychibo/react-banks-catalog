@@ -1,0 +1,96 @@
+.bank-catalog__input-group {
+  position: relative;
+  margin: 0;
+}
+
+.bank-catalog__input {
+  background-color: transparent;
+  font-family: inherit;
+  font-size: 14px;
+  padding: 10px 10px 10px 0;
+  display: block;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #757575;
+
+  &:focus {
+    outline: none;
+  }
+
+  @media screen and (max-width: 500px) {
+    font-size: 13px;
+  }
+}
+
+.bank-catalog__label {
+  position: absolute;
+  pointer-events: none;
+  top: 5px;
+  transition: 0.2s ease all;
+}
+
+.bank-catalog__input {
+  -webkit-box-shadow: inset 0 0 0 50px #fff
+}
+
+.bank-catalog__input::-webkit-input-placeholder {
+  color: transparent;
+  transition: color 0.2s ease-in-out
+}
+
+.bank-catalog__input:-moz-placeholder {
+  color: transparent;
+  transition: color 0.2s ease-in-out
+}
+
+/* FF 4-18 */
+.bank-catalog__input::-moz-placeholder {
+  color: transparent;
+  transition: color 0.2s ease-in-out
+}
+
+/* FF 19+ */
+.bank-catalog__input:-ms-input-placeholder {
+  color: transparent;
+  transition: color 0.2s ease-in-out
+}
+
+/* IE 10+ */
+
+.bank-catalog__input:focus::-webkit-input-placeholder {
+  color: $darkgrey;
+}
+
+.bank-catalog__input:focus:-moz-placeholder {
+  color: $darkgrey;
+}
+
+/* FF 4-18 */
+.bank-catalog__input:focus::-moz-placeholder {
+  color: $darkgrey;
+}
+
+/* FF 19+ */
+.bank-catalog__input:focus:-ms-input-placeholder {
+  color: $darkgrey;
+}
+
+/* IE 10+ */
+
+.bank-catalog__input:focus~.bank-catalog__label,
+.bank-catalog__input:not(:placeholder-shown)~.bank-catalog__label {
+  top: -20px;
+  left: 0;
+}
+
+.error-message {
+  position: absolute;
+  background-color: #ff8c79;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  margin-bottom: -26px;
+  text-align: center;
+  color: #fff;
+  padding: 3px;
+}
